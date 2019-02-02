@@ -340,11 +340,11 @@ create_symlink osxcross-cmake "$TARGET_DIR/bin/x86_64-apple-$TARGET-cmake"
 
 unset MACOSX_DEPLOYMENT_TARGET
 
-test_compiler o32-clang $BASE_DIR/oclang/test.c
-test_compiler o64-clang $BASE_DIR/oclang/test.c
+#test_compiler o32-clang $BASE_DIR/oclang/test.c
+#test_compiler o64-clang $BASE_DIR/oclang/test.c
 
-test_compiler o32-clang++ $BASE_DIR/oclang/test.cpp
-test_compiler o64-clang++ $BASE_DIR/oclang/test.cpp
+#test_compiler o32-clang++ $BASE_DIR/oclang/test.cpp
+#test_compiler o64-clang++ $BASE_DIR/oclang/test.cpp
 
 if [ $(osxcross-cmp ${SDK_VERSION/u/} ">=" 10.7) -eq 1 ]; then
   if [ ! -d "$SDK_DIR/MacOSX$SDK_VERSION.sdk/usr/include/c++/v1" ]; then

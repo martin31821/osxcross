@@ -572,7 +572,7 @@ bool Target::setup() {
 
   switch (stdlib) {
   case StdLib::libcxx: {
-    CXXHeaderPath += "/usr/include/c++/v1";
+    CXXHeaderPath += "/usr/include/c++";
     if (!dirExists(CXXHeaderPath)) {
       err << "cannot find " << getStdLibString(stdlib) << " headers"
           << err.endl();
